@@ -1,0 +1,20 @@
+  RespType: Case     ,  File: .Y04,  Records:                     0
+                 15712
+  RespType: Displ    ,  File: .Y00,  Records:                     0
+                239712
+  RespType: React    ,  File: .Y03,  Records:                     0
+                239712
+  RespType: Frame    ,  File: .Y08,  Records:                     0
+               4967360
+  RespType: Spring   ,  File: .Y05,  Records:                     0
+                 54480
+  RespType: Plimit   ,  File: .Y06,  Records:                     0
+                 23520
+  RespType: JFJoint  ,  File: .Y01,  Records:                     0
+                 21792
+  RespType: JFSpring ,  File: .Y02,  Records:                     0
+                 21792
+  RespType: StrainAge,  File: .Y07,  Records:                     0
+                136960
+  StateType: Frame    ,  File: .Y09,  Records:                     0
+                774360
