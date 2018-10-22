@@ -1,5 +1,6 @@
 #Librerias a utilizar
 #https://github.com/cran/metaheuristicOpt/blob/master/R/DA.Algorithm.R
+#http://www.alimirjalili.com/DA.html
 #install scipy: pip install scipy
 
 from Solution import Solution
@@ -46,10 +47,10 @@ class Meta:
 
         ub = np.ones(3) * DATOS_MH["ub"]
         lb = np.ones(3) * DATOS_MH["lb"]
-        initialRadius = (ub - lb) / 10
-        print("initialRadius: ", initialRadius)
+        initialRadius = (ub - lb) / 20
+        #print("initialRadius: ", initialRadius)
         Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 10
-        print("delta max: ", Delta_max)
+        #print("delta max: ", Delta_max)
 
         foodFitness = float("inf")
         foodPos = np.zeros(3)
@@ -109,14 +110,14 @@ class Meta:
                     enemyPos = DragonFlies[cont1]
             '''
             arrayFitness = np.array(DragonFlies)
-            fitness = list(arrayFitness[:, 6])
+            fitness = arrayFitness[:, 6]
+            fitness = sorted(fitness, key=lambda x: x[6], reverse= False)
 
-            foodFitness = np.min(fitness)
-            indexMin = np.argmin(fitness)
-            foodPos = DragonFlies[indexMin][3:6]
+            foodFitness = fitness[0][6]
+            foodPos = DragonFlies[1][3:5]
 
             arrDF = np.array(DragonFlies)
-            enemyPos = list(arrDF[len(arrDF) - 1, ])[3:6]
+            enemyPos = list(arrDF[len(arrDF) - 1, ])[3:5]
             enemyFitness = fitness[len(fitness) - 1]
 
             '''REMUEVO Y CAMBIO ARCHIVOS CORRESPONDIENTES PARA EVITAR TIEMPOS DE CALCULOS EXPONENCIALES'''
@@ -174,7 +175,7 @@ class Meta:
         orden = [0,0,0]
         
         '''LOOP ALGORITMO'''
-        i = 1
+        i = 0
         while i <= self.iteraciones:
             min = modelo.tesadoMinimo
             star_time = time.time() #Registro de tiempo
@@ -187,10 +188,10 @@ class Meta:
             my_c = float(0.1 - i * (( 0.1 - 0) / (self.iteraciones / 2)))
             my_c = 0 if my_c < 0 else my_c
             
-            s = 2 * random.uniform(0, 1) * my_c # Seperation weight
-            a = 2 * random.uniform(0, 1) * my_c # Alignment weight
-            c = 2 * random.uniform(0, 1) * my_c # Cohesion weight
-            f = 2 * random.uniform(0, 1)     # Food attraction weight
+            s = 2 * random.uniform(lb, ub) * my_c # Seperation weight
+            a = 2 * random.uniform(lb, ub) * my_c # Alignment weight
+            c = 2 * random.uniform(lb, ub) * my_c # Cohesion weight
+            f = 2 * random.uniform(lb, ub)     # Food attraction weight
             e = my_c        # Enemy distraction weight
 
             totalDragonFlies = len(DragonFlies)
