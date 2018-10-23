@@ -212,24 +212,25 @@ class Meta:
                 index = 0
                 neighboursNo = 0
 
-                orden = [DragonFlies[iDragonFly][0], DragonFlies[iDragonFly][1], DragonFlies[iDragonFly][2]]
-                mag = [DragonFlies[iDragonFly][3], DragonFlies[iDragonFly][4], DragonFlies[iDragonFly][5]]
+                orden = DragonFlies[iDragonFly][0:3]
+                mag = DragonFlies[iDragonFly][3:6]
 
                 print("mag inicial: ", mag, orden)
 
-                magDelta = [DeltaDragonFlies[iDragonFly][3], DeltaDragonFlies[iDragonFly][4], DeltaDragonFlies[iDragonFly][5]]
+                magDelta = DeltaDragonFlies[iDragonFly][3:6]
 
                 neighboursDelta = [np.zeros(3) for x in range(totalDragonFlies)]
                 neighboursDragonfly = [np.zeros(3) for x in range(totalDragonFlies)]
 
-                for j in range(totalDragonFlies):
-                    subMag = [DragonFlies[j][3], DragonFlies[j][4], DragonFlies[j][5]]
-                    subMagDelta = [DeltaDragonFlies[j][3], DeltaDragonFlies[j][4], DeltaDragonFlies[j][5]]
+                for j in range(1, totalDragonFlies):
+                    #subMag = DragonFlies[j][3:3]
+                    nDelta = DeltaDragonFlies[j][3:6]
+                    nDragonFly = DragonFlies[j][3:6]
         
-                    distanceEc = distance.euclidean(mag, subMag)
+                    distanceEc = distance.euclidean(mag, nDragonFly)
                     if distanceEc <= r and distanceEc is not 0:
-                        neighboursDelta[index] = subMagDelta
-                        neighboursDragonfly[index] = subMag
+                        neighboursDelta[index] = nDelta
+                        neighboursDragonfly[index] = nDragonFly
 
                         index = index + 1
                         neighboursNo = neighboursNo + 1
@@ -238,7 +239,7 @@ class Meta:
                 S = np.zeros(3)
                 if neighboursNo > 1:
                     for k in range(neighboursNo):
-                       S = S + (np.array(neighboursDragonfly[k])-np.array(mag))
+                       S = S + (neighboursDragonfly[k]) - np.array(mag))
                     S = -1 * S
 
                 #Alignment
@@ -276,7 +277,7 @@ class Meta:
                 
                 if (distance2Food > r):
                     if neighboursNo > 1:
-                        for j in range(3):
+                        for j in range(1, 3):
                             #print("levy: ", self.levy(3))
                             #print("magDelta[j]: ", magDelta[j])
                             #print("w: ", w)
