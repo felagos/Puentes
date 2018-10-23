@@ -47,6 +47,10 @@ class Meta:
 
         ub = np.ones(3) * DATOS_MH["ub"]
         lb = np.ones(3) * DATOS_MH["lb"]
+
+        ub = max(modelo.numx)
+        lb = modelo.tesadoMinimo
+
         initialRadius = (ub - lb) / 20
         #print("initialRadius: ", initialRadius)
         Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 10
@@ -67,8 +71,8 @@ class Meta:
             mag2 = solutions[w].magnitud
             orden2 = solutions[w].orden
 
-            deltamag2 = solutions[w].magnitud
-            deltaorden2 = solutions[w].orden
+            deltamag2 = deltaSolutions[w].magnitud
+            deltaorden2 = deltaSolutions[w].orden
 
             for e in range (3):
                 DragonFlies[w][e] = orden2[e]
@@ -90,10 +94,12 @@ class Meta:
             print("***POBLACIoN***:  " + str(cont1))
             modelo.cargarPuenteModificado()  # Cargamos Puente Modificado
             # SE APLICA TESADO A LA solution i
+            #print("solucion: ", solutions[cont1])
             modelo.aplicarTesado([solutions[cont1]])
             #modelo.aplicarTesado([deltaSolutions[cont1]])
             # GUARDO EL VALOR DE FITNESS DE solution i  EN NIDOS i
             DragonFlies[cont1][6] = solutions[cont1].calcularFitness(modelo)
+            #print("value fitness: ", DragonFlies[cont1][6])
             #DeltaDragonFlies[cont1][6] = deltaSolutions[cont1].calcularFitness(modelo)
             if DragonFlies[cont1][6] == -1:
                 self.regenerarSolution(modelo, solutions, cont1)
@@ -109,16 +115,6 @@ class Meta:
                     enemyFitness = DragonFlies[cont1][6]
                     enemyPos = DragonFlies[cont1]
             '''
-            arrayFitness = np.array(DragonFlies)
-            fitness = arrayFitness[:, 6]
-            fitness = sorted(fitness, key=lambda x: x[6], reverse= False)
-
-            foodFitness = fitness[0][6]
-            foodPos = DragonFlies[1][3:5]
-
-            arrDF = np.array(DragonFlies)
-            enemyPos = list(arrDF[len(arrDF) - 1, ])[3:5]
-            enemyFitness = fitness[len(fitness) - 1]
 
             '''REMUEVO Y CAMBIO ARCHIVOS CORRESPONDIENTES PARA EVITAR TIEMPOS DE CALCULOS EXPONENCIALES'''
             os.remove('C:\Puentes\Modificado\PuenteMod.Y08')
@@ -169,7 +165,20 @@ class Meta:
             cont1 = cont1 + 1
 
         #print("total filas: ", len(self.solutions), " - total columnas: ",len(self.solutions[0].orden+self.solutions[0].magnitud))
+        
+        arrayFitness = np.array(DragonFlies)
+        #print("arrayFitness: ", arrayFitness)
+        fitness = arrayFitness[:, 6]
+        #print("fitness: ", fitness)
+   
+        fitness = sorted(fitness)
 
+        foodFitness = fitness[0]
+        foodPos = DragonFlies[0][2:5]
+
+        arrDF = np.array(DragonFlies)
+        enemyPos = list(arrDF[len(arrDF) - 1, ])[2:5]
+        enemyFitness = fitness[len(fitness) - 1]
 
         mag = [0,0,0]
         orden = [0,0,0]
@@ -180,6 +189,7 @@ class Meta:
             min = modelo.tesadoMinimo
             star_time = time.time() #Registro de tiempo
             modelo.cargarPuenteModificado()
+            npend = DATOS_TESADO["NumPendolas"]
 
             r = (ub - lb) / 4 + (( ub - lb) * ( i / self.iteraciones ) * 2)
 
@@ -205,21 +215,21 @@ class Meta:
                 orden = [DragonFlies[iDragonFly][0], DragonFlies[iDragonFly][1], DragonFlies[iDragonFly][2]]
                 mag = [DragonFlies[iDragonFly][3], DragonFlies[iDragonFly][4], DragonFlies[iDragonFly][5]]
 
-                ordenDelta = [DeltaDragonFlies[iDragonFly][0], DeltaDragonFlies[iDragonFly][1], DeltaDragonFlies[iDragonFly][2]]
+                print("mag inicial: ", mag, orden)
+
                 magDelta = [DeltaDragonFlies[iDragonFly][3], DeltaDragonFlies[iDragonFly][4], DeltaDragonFlies[iDragonFly][5]]
 
                 neighboursDelta = [np.zeros(3) for x in range(totalDragonFlies)]
                 neighboursDragonfly = [np.zeros(3) for x in range(totalDragonFlies)]
 
-
                 for j in range(totalDragonFlies):
                     subMag = [DragonFlies[j][3], DragonFlies[j][4], DragonFlies[j][5]]
                     subMagDelta = [DeltaDragonFlies[j][3], DeltaDragonFlies[j][4], DeltaDragonFlies[j][5]]
-
+        
                     distanceEc = distance.euclidean(mag, subMag)
-                    if all(distanceEc <= r) and distanceEc is not 0:
-                        neighboursDelta[index] = subMag
-                        neighboursDragonfly[index] = mag
+                    if distanceEc <= r and distanceEc is not 0:
+                        neighboursDelta[index] = subMagDelta
+                        neighboursDragonfly[index] = subMag
 
                         index = index + 1
                         neighboursNo = neighboursNo + 1
@@ -238,21 +248,23 @@ class Meta:
                     #A = np.squeeze(np.asarray(A))
                 
                 #Cohesion
-                C = magDelta
+                C = mag
                 if neighboursNo > 1:
                     C = np.array(neighboursDragonfly).sum(axis=0) / neighboursNo
                     #C = np.squeeze(np.asarray(C))
                 C = np.array(C) - np.array(mag)
 
                 #Attraction to food
+                #print("mag: ", mag)
+                #cprint("foodPos: ", foodPos)
                 distance2Food = distance.euclidean(mag, foodPos)
                 F = 0
-                if all(distance2Food <= r):
+                if (distance2Food <= r):
                     F = np.array(foodPos) - np.array(mag)
 
                 distance2Enemy = distance.euclidean(mag, enemyPos)
                 E = np.zeros(3)
-                if all(distance2Enemy <= r):
+                if (distance2Enemy <= r):
                     E = np.array(enemyPos) + np.array(mag)
                 
                 
@@ -262,38 +274,60 @@ class Meta:
                 #print("F: ", F)
                 #print("E: ", E)
                 
-                if any(distance2Food > r):
+                if (distance2Food > r):
                     if neighboursNo > 1:
                         for j in range(3):
                             #print("levy: ", self.levy(3))
-                            mov = w * magDelta[j] + random.uniform(0, 1) * A[j] + random.uniform(0, 1) * C[j] + random.uniform(0, 1) * S[j]
+                            #print("magDelta[j]: ", magDelta[j])
+                            #print("w: ", w)
+                            #print("random.uniform(lb, ub): ", random.uniform(lb, ub))
+                            #print("A[j]: ", A[j])
+                            #print("S[j]: ", S[j])
+                            #print("C[j]: ", C[j])
+                            mov = w * magDelta[j] + random.uniform(lb, ub) * A[j] + random.uniform(lb, ub) * C[j] + random.uniform(lb, ub) * S[j]
                             magDelta[j] = mov
-                            if magDelta[j] > Delta_max[j]:
+                            #print("magDelta[j]: ", magDelta[j])
+                            #print("Delta_max[j]: ", Delta_max[j])
+                            '''
+                            if (magDelta[j] > Delta_max[j]):
                                 magDelta[j] = Delta_max[j]
 
-                            if magDelta[j] < -1 * Delta_max[j]:
+                            if (magDelta[j] < -1 * Delta_max[j]):
                                 magDelta[j] = -1 * Delta_max[j]
+                            '''
 
                             mag[j] = np.array(mag[j]) + np.array(magDelta[j])
                             if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                                 mag[j] = min
                     else:
                         mag = np.array(mag) + self.levy(3) * np.array(mag)
+                        z = randint(0, npend - 1)
+                        orden = self.permutaciones[z]
 
-                        #DragonFlies[iDragonFly][3] = mag[0]
-                        #DragonFlies[iDragonFly][4] = mag[1]
-                        #DragonFlies[iDragonFly][5] = mag[2]
+                        #solution = Solution(orden, mag)
+                        
+                        DragonFlies[iDragonFly][3] = mag[0]
+                        DragonFlies[iDragonFly][4] = mag[1]
+                        DragonFlies[iDragonFly][5] = mag[2]
+
+                        #modelo.cargarPuenteModificado()
+                        #Aplicamos tesado en función a Solution
+                        #modelo.aplicarTesado([solution])
 
                         magDelta = np.zeros(3)
                 else:
                     for j in range(3):
                         magDelta[j] = (a*A[j]+c*C[j]+s*S[j]+f*F[j]+e*E[j]) + w*magDelta[j]
-                        if magDelta[j] > Delta_max[j]:
+                        #print("magDelta[j]: ", magDelta[j])
+                        #print("Delta_max[j]: ", Delta_max[j])
+                        '''
+                        if (magDelta[j] > Delta_max[j]):
                             magDelta[j] = Delta_max[j]
 
-                        if magDelta[j] < -1 * Delta_max[j]:
+                        if (magDelta[j] < -1 * Delta_max[j]):
                             magDelta[j] = -1 * Delta_max[j]
-                        
+                        '''
+
                         mag[j] = np.array(mag[j]) + np.array(magDelta[j])
 
                         if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
@@ -304,7 +338,7 @@ class Meta:
                 #DragonFlies[iDragonFly][3] = mag[0]
                 #DragonFlies[iDragonFly][4] = mag[1]
                 #DragonFlies[iDragonFly][5] = mag[2]
-
+                print("mag final: ", mag, orden)
                 solution = Solution(orden, mag)
 
                 modelo.aplicarTesado([solution])  #Se aplica tension en la nueva solution con vuelo de Levy
@@ -313,6 +347,8 @@ class Meta:
                 if newFitness == -1:
                     iDragonFly = iDragonFly - 1
                     continue
+
+                print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[iDragonFly][6])
 
                 if newFitness < DragonFlies[iDragonFly][6]:
                     for j in range(3):

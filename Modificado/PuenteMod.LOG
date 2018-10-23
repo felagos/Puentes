@@ -6,7 +6,7 @@
 
 
 
- B E G I N   A N A L Y S I S                                2018/10/11  23:02:37
+ B E G I N   A N A L Y S I S                                2018/10/23  07:52:26
 
 
  RUNNING ANALYSIS WITHIN THE GUI PROCESS
@@ -32,11 +32,11 @@
  NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
 
 
- E L E M E N T   F O R M A T I O N                                      23:02:37
+ E L E M E N T   F O R M A T I O N                                      07:52:27
 
 
 
- L I N E A R   E Q U A T I O N   S O L U T I O N                        23:02:37
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        07:52:27
 
  FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -53,7 +53,7 @@
  ---------------------------------
 
 
- L I N E A R   S T A T I C   C A S E S                                  23:02:37
+ L I N E A R   S T A T I C   C A S E S                                  07:52:27
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -66,7 +66,7 @@
  CASE: TEMP
 
 
- N O N L I N E A R   S T A T I C   A N A L Y S I S                      23:02:37
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      07:52:27
 
  CASE: LCASE1
 
@@ -365,19 +365,19 @@
 
  NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =          20
 
- TIME FOR INITIALIZING ANALYSIS            =        0.02
- TIME FOR CONTROLLING ANALYSIS             =        0.04
- TIME FOR UPDATING LOADS AND STATE         =        0.72
- TIME FOR FORMING STIFFNESS MATRIX         =        0.02
- TIME FOR SOLVING STIFFNESS MATRIX         =        1.00
- TIME FOR CALCULATING DISPLACEMENTS        =        0.52
- TIME FOR DETERMINING EVENTS               =        0.00
- TIME FOR SAVING RESULTS                   =        0.04
+ TIME FOR INITIALIZING ANALYSIS            =        0.00
+ TIME FOR CONTROLLING ANALYSIS             =        0.09
+ TIME FOR UPDATING LOADS AND STATE         =        0.85
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.06
+ TIME FOR SOLVING STIFFNESS MATRIX         =        1.78
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.74
+ TIME FOR DETERMINING EVENTS               =        0.01
+ TIME FOR SAVING RESULTS                   =        0.09
                                                ----------
- TOTAL TIME FOR THIS ANALYSIS              =        2.36
+ TOTAL TIME FOR THIS ANALYSIS              =        3.62
 
 
- N O N L I N E A R   S T A T I C   A N A L Y S I S                      23:02:39
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      07:52:30
 
  CASE: TCASE0
 
@@ -457,19 +457,19 @@
 
  NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
 
- TIME FOR INITIALIZING ANALYSIS            =        0.06
+ TIME FOR INITIALIZING ANALYSIS            =        0.10
  TIME FOR CONTROLLING ANALYSIS             =        0.06
- TIME FOR UPDATING LOADS AND STATE         =        0.10
- TIME FOR FORMING STIFFNESS MATRIX         =        0.00
- TIME FOR SOLVING STIFFNESS MATRIX         =        0.32
- TIME FOR CALCULATING DISPLACEMENTS        =        0.06
+ TIME FOR UPDATING LOADS AND STATE         =        0.07
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.01
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.37
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.07
  TIME FOR DETERMINING EVENTS               =        0.00
  TIME FOR SAVING RESULTS                   =        0.00
                                                ----------
- TOTAL TIME FOR THIS ANALYSIS              =        0.60
+ TOTAL TIME FOR THIS ANALYSIS              =        0.68
 
 
- A N A L Y S I S   C O M P L E T E                          2018/10/11  23:02:40
+ A N A L Y S I S   C O M P L E T E                          2018/10/23  07:52:31
 
 
  SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
@@ -478,7 +478,7 @@
 
 
 
- B E G I N   A N A L Y S I S                                2018/10/11  23:02:42
+ B E G I N   A N A L Y S I S                                2018/10/23  07:52:34
 
 
  RUNNING ANALYSIS WITHIN THE GUI PROCESS
@@ -504,7 +504,7 @@
  NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
 
 
- N O N L I N E A R   S T A T I C   A N A L Y S I S                      23:02:42
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      07:52:34
 
  CASE: TCASE0
 
@@ -521,7 +521,7 @@
  FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
 
 
- E L E M E N T   F O R M A T I O N                                      23:02:43
+ E L E M E N T   F O R M A T I O N                                      07:52:34
 
 
  CASE: TCASE0
@@ -589,15 +589,277 @@
  NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
 
  TIME FOR INITIALIZING ANALYSIS            =        0.18
- TIME FOR CONTROLLING ANALYSIS             =        0.04
- TIME FOR UPDATING LOADS AND STATE         =        0.08
+ TIME FOR CONTROLLING ANALYSIS             =        0.05
+ TIME FOR UPDATING LOADS AND STATE         =        0.06
  TIME FOR FORMING STIFFNESS MATRIX         =        0.00
- TIME FOR SOLVING STIFFNESS MATRIX         =        0.30
- TIME FOR CALCULATING DISPLACEMENTS        =        0.06
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.35
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.08
  TIME FOR DETERMINING EVENTS               =        0.00
- TIME FOR SAVING RESULTS                   =        0.18
+ TIME FOR SAVING RESULTS                   =        0.22
                                                ----------
- TOTAL TIME FOR THIS ANALYSIS              =        0.84
+ TOTAL TIME FOR THIS ANALYSIS              =        0.94
 
 
- A N A L Y S I S   C O M P L E T E                          2018/10/11  23:02:44
+ A N A L Y S I S   C O M P L E T E                          2018/10/23  07:52:35
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/23  07:52:38
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           6
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      07:52:38
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      07:52:38
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.14
+ TIME FOR CONTROLLING ANALYSIS             =        0.05
+ TIME FOR UPDATING LOADS AND STATE         =        0.07
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.04
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.31
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.05
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.34
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        1.00
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/23  07:52:40
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/23  07:52:43
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           7
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      07:52:43
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      07:52:43
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.19
+ TIME FOR CONTROLLING ANALYSIS             =        0.06
+ TIME FOR UPDATING LOADS AND STATE         =        0.10
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.00
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.36
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.04
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.30
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        1.05
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/23  07:52:44

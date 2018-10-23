@@ -5205,10 +5205,10 @@ TABLE:  "LOAD CASE DEFINITIONS"
    Case="TORRE 3"   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType="Super Dead"   DesActOpt="Prog Det"   DesignAct="Long-Term Composite"   AutoType=None   RunCase=No
    Case=TENDON   Type=LinStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Other   AutoType=None   RunCase=No
    Case=LCASE1   Type=NonStatic   InitialCond=Zero   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=Yes
-   Case=LCASET0   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No   GUID=0dd490a2-0a15-491b-920b-fe84e4fb6e4f
-   Case=LCASET1   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No   GUID=37f76777-fd11-48c0-a382-040e937a5ce6
-   Case=LCASET2   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No   GUID=b423b37c-24c4-484f-bccc-7f99b093a612
-   Case=TCASE0   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=Yes   GUID=bce5b43d-ccbb-4c45-ac40-7d7eed1acf03
+   Case=LCASET0   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No   GUID=70bf4cbd-e9d8-4532-910f-8d8796345021
+   Case=LCASET1   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No   GUID=95d2f43e-4b64-4222-bfe7-d9f7861dc367
+   Case=LCASET2   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No   GUID=525e04f9-2d04-4128-a79d-e8bdcef0e2eb
+   Case=TCASE0   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=Yes   GUID=90ed30d8-5c02-4d1d-b604-87221f951f55
    Case=TCASE1   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No
    Case=TCASE2   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No
    Case=TCASE3   Type=NonStatic   InitialCond=LCASE1   DesTypeOpt="Prog Det"   DesignType=Other   DesActOpt="Prog Det"   DesignAct=Staged   AutoType=None   RunCase=No
