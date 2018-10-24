@@ -45,15 +45,15 @@ class Meta:
         deltaSolutions = self.deltaSolution
         N = len(solutions) # N DEFINE EL NUMERO DE NIDOS.
 
-        ub = np.ones(3) * DATOS_MH["ub"]
-        lb = np.ones(3) * DATOS_MH["lb"]
+        ub = np.ones(3) * max(modelo.numx)
+        lb = np.ones(3) * modelo.tesadoMinimo
 
-        ub = max(modelo.numx)
-        lb = modelo.tesadoMinimo
+        #ub = max(modelo.numx)
+        #lb = modelo.tesadoMinimo
 
         initialRadius = (ub - lb) / 20
         #print("initialRadius: ", initialRadius)
-        Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 10
+        Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 20
         #print("delta max: ", Delta_max)
 
         foodFitness = float("inf")
@@ -85,6 +85,7 @@ class Meta:
         modelo.abrirSAP()
 
         Registro = open("Registro.txt", "w")  # CREA EL ARCHIVO DE REGISTRO
+        RegPoblacion = open("Poblacion.txt", "w")
 
         cont1 = 0
         while cont1 < self.poblacion:
@@ -99,6 +100,7 @@ class Meta:
             #modelo.aplicarTesado([deltaSolutions[cont1]])
             # GUARDO EL VALOR DE FITNESS DE solution i  EN NIDOS i
             DragonFlies[cont1][6] = solutions[cont1].calcularFitness(modelo)
+
             #print("value fitness: ", DragonFlies[cont1][6])
             #DeltaDragonFlies[cont1][6] = deltaSolutions[cont1].calcularFitness(modelo)
             if DragonFlies[cont1][6] == -1:
@@ -155,6 +157,14 @@ class Meta:
             Registro.write("T3" + "," + str(DragonFlies[cont1][5]) + ",")
             Registro.write("FIT" + "," + str(DragonFlies[cont1][6]) + ",")
 
+            RegPoblacion.write("P1" + "," + str(DragonFlies[cont1][0]) + ",")
+            RegPoblacion.write("P2" + "," + str(DragonFlies[cont1][1]) + ",")
+            RegPoblacion.write("P3" + "," + str(DragonFlies[cont1][2]) + ",")
+            RegPoblacion.write("T1" + "," + str(DragonFlies[cont1][3]) + ",")
+            RegPoblacion.write("T2" + "," + str(DragonFlies[cont1][4]) + ",")
+            RegPoblacion.write("T3" + "," + str(DragonFlies[cont1][5]) + ",")
+            RegPoblacion.write("FIT" + "," + str(DragonFlies[cont1][6]) + "\n\n")
+
             # Registro de tiempo por calculo de cada individuo de la poblacion
             tiempototaliteracion = time.time() - star_time
             # Mostramos Tiempo del calculo de cada individuo de la poblacion
@@ -198,10 +208,10 @@ class Meta:
             my_c = float(0.1 - i * (( 0.1 - 0) / (self.iteraciones / 2)))
             my_c = 0 if my_c < 0 else my_c
             
-            s = 2 * random.uniform(lb, ub) * my_c # Seperation weight
-            a = 2 * random.uniform(lb, ub) * my_c # Alignment weight
-            c = 2 * random.uniform(lb, ub) * my_c # Cohesion weight
-            f = 2 * random.uniform(lb, ub)     # Food attraction weight
+            s = 2 * random.uniform(0, 1) * my_c # Seperation weight
+            a = 2 * random.uniform(0, 1) * my_c # Alignment weight
+            c = 2 * random.uniform(0, 1) * my_c # Cohesion weight
+            f = 2 * random.uniform(0, 1)     # Food attraction weight
             e = my_c        # Enemy distraction weight
 
             totalDragonFlies = len(DragonFlies)
@@ -228,7 +238,7 @@ class Meta:
                     nDragonFly = DragonFlies[j][3:6]
         
                     distanceEc = distance.euclidean(mag, nDragonFly)
-                    if distanceEc <= r and distanceEc is not 0:
+                    if all(distanceEc <= r) and distanceEc is not 0:
                         neighboursDelta[index] = nDelta
                         neighboursDragonfly[index] = nDragonFly
 
@@ -239,7 +249,7 @@ class Meta:
                 S = np.zeros(3)
                 if neighboursNo > 1:
                     for k in range(neighboursNo):
-                       S = S + (neighboursDragonfly[k]) - np.array(mag))
+                       S = S + ((neighboursDragonfly[k]) - np.array(mag))
                     S = -1 * S
 
                 #Alignment
@@ -260,12 +270,12 @@ class Meta:
                 #cprint("foodPos: ", foodPos)
                 distance2Food = distance.euclidean(mag, foodPos)
                 F = 0
-                if (distance2Food <= r):
+                if all(distance2Food <= r):
                     F = np.array(foodPos) - np.array(mag)
 
                 distance2Enemy = distance.euclidean(mag, enemyPos)
                 E = np.zeros(3)
-                if (distance2Enemy <= r):
+                if all(distance2Enemy <= r):
                     E = np.array(enemyPos) + np.array(mag)
                 
                 
@@ -275,9 +285,9 @@ class Meta:
                 #print("F: ", F)
                 #print("E: ", E)
                 
-                if (distance2Food > r):
+                if all(distance2Food > r):
                     if neighboursNo > 1:
-                        for j in range(1, 3):
+                        for j in range(3):
                             #print("levy: ", self.levy(3))
                             #print("magDelta[j]: ", magDelta[j])
                             #print("w: ", w)
@@ -285,7 +295,7 @@ class Meta:
                             #print("A[j]: ", A[j])
                             #print("S[j]: ", S[j])
                             #print("C[j]: ", C[j])
-                            mov = w * magDelta[j] + random.uniform(lb, ub) * A[j] + random.uniform(lb, ub) * C[j] + random.uniform(lb, ub) * S[j]
+                            mov = w * magDelta[j] + random.uniform(0, 1) * A[j] + random.uniform(0, 1) * C[j] + random.uniform(0, 1) * S[j]
                             magDelta[j] = mov
                             #print("magDelta[j]: ", magDelta[j])
                             #print("Delta_max[j]: ", Delta_max[j])
@@ -297,7 +307,10 @@ class Meta:
                                 magDelta[j] = -1 * Delta_max[j]
                             '''
 
-                            mag[j] = np.array(mag[j]) + np.array(magDelta[j])
+                            if (magDelta[j] < -1 * Delta_max[j]):
+                                magDelta[j] = -1 * Delta_max[j]
+
+                            mag[j] = np.array(mag[j]) - np.array(magDelta[j])
                             if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                                 mag[j] = min
                     else:
@@ -307,9 +320,9 @@ class Meta:
 
                         #solution = Solution(orden, mag)
                         
-                        DragonFlies[iDragonFly][3] = mag[0]
-                        DragonFlies[iDragonFly][4] = mag[1]
-                        DragonFlies[iDragonFly][5] = mag[2]
+                        #DragonFlies[iDragonFly][3] = mag[0]
+                        #DragonFlies[iDragonFly][4] = mag[1]
+                        #DragonFlies[iDragonFly][5] = mag[2]
 
                         #modelo.cargarPuenteModificado()
                         #Aplicamos tesado en función a Solution
@@ -329,16 +342,24 @@ class Meta:
                             magDelta[j] = -1 * Delta_max[j]
                         '''
 
-                        mag[j] = np.array(mag[j]) + np.array(magDelta[j])
+                        if (magDelta[j] < -1 * Delta_max[j]):
+                            magDelta[j] = -1 * Delta_max[j]
+
+                        mag[j] = np.array(mag[j]) - np.array(magDelta[j])
 
                         if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                             mag[j] = min
 
                 #mag = self.checkBounds(mag, lb, ub)
+
+                DragonFlies[iDragonFly][0] = orden[0]
+                DragonFlies[iDragonFly][1] = orden[1]
+                DragonFlies[iDragonFly][2] = orden[2]
             
-                #DragonFlies[iDragonFly][3] = mag[0]
-                #DragonFlies[iDragonFly][4] = mag[1]
-                #DragonFlies[iDragonFly][5] = mag[2]
+                DragonFlies[iDragonFly][3] = mag[0]
+                DragonFlies[iDragonFly][4] = mag[1]
+                DragonFlies[iDragonFly][5] = mag[2]
+                
                 print("mag final: ", mag, orden)
                 solution = Solution(orden, mag)
 
@@ -349,14 +370,14 @@ class Meta:
                     iDragonFly = iDragonFly - 1
                     continue
 
-                print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[iDragonFly][6])
-
                 if newFitness < DragonFlies[iDragonFly][6]:
                     for j in range(3):
                         DragonFlies[iDragonFly][j] = orden[j] 
                         DragonFlies[iDragonFly][j + 3] = mag[j]
                     DragonFlies[iDragonFly][6] = newFitness
-
+                
+                print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[iDragonFly][6])
+    
             #Ordenamos la Poblacion de menos a mayor
             DragonFlies= sorted(DragonFlies, key=lambda x: x[6], reverse= False) 
 
@@ -433,6 +454,9 @@ class Meta:
         for i in range(self.poblacion):
             mag = []
             mag2 = []
+            for j in range (npend):
+                mag.append(random.uniform(min, modelo.tesadoMaximo[j]))
+                mag2.append(random.uniform(min, modelo.tesadoMaximo[j]))
             #for j in range (npend):
             #    mag.append(random.uniform(min, modelo.tesadoMaximo[j])) #La magnitud esta entre min y max
 
@@ -440,11 +464,15 @@ class Meta:
             #z = randint(0, npend-1)
             #orden = self.permutaciones[z]
             #solution = Solution(orden, mag)     #Solution
-            solution = self.getSolution(min, npend, modelo, [])
+            z = randint(0, npend-1)
+            orden = self.permutaciones[z]
+            solution = Solution(orden, mag)     #Solution
             self.solutions.append(solution)
 
-            solutionDelta = self.getSolution(min, npend, modelo, [])
-            self.deltaSolution.append(solutionDelta)
+            z2 = randint(0, npend-1)
+            orden2 = self.permutaciones[z2]
+            solution = Solution(orden2, mag2)   
+            self.deltaSolution.append(solution)
 
             ##if forDelta is False:
             #    self.solutions.append(solution)     #Solutions
