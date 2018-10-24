@@ -48,6 +48,9 @@ class Meta:
         ub = np.ones(3) * max(modelo.numx)
         lb = np.ones(3) * modelo.tesadoMinimo
 
+        maxTesado = max(modelo.numx)
+        minTesado = modelo.tesadoMinimo
+
         #ub = max(modelo.numx)
         #lb = modelo.tesadoMinimo
 
@@ -203,15 +206,15 @@ class Meta:
 
             r = (ub - lb) / 4 + (( ub - lb) * ( i / self.iteraciones ) * 2)
 
-            w = float(0.9 - i * ((0.9-0.4) / self.iteraciones))
+            w = float(0.9 - i * ((0.9 - 0.4) / self.iteraciones))
 
             my_c = float(0.1 - i * (( 0.1 - 0) / (self.iteraciones / 2)))
             my_c = 0 if my_c < 0 else my_c
             
-            s = 2 * random.uniform(0, 1) * my_c # Seperation weight
-            a = 2 * random.uniform(0, 1) * my_c # Alignment weight
-            c = 2 * random.uniform(0, 1) * my_c # Cohesion weight
-            f = 2 * random.uniform(0, 1)     # Food attraction weight
+            s = 2 * random.uniform(minTesado, maxTesado) * my_c # Seperation weight
+            a = 2 * random.uniform(minTesado, maxTesado) * my_c # Alignment weight
+            c = 2 * random.uniform(minTesado, maxTesado) * my_c # Cohesion weight
+            f = 2 * random.uniform(minTesado, maxTesado)     # Food attraction weight
             e = my_c        # Enemy distraction weight
 
             totalDragonFlies = len(DragonFlies)
@@ -295,7 +298,7 @@ class Meta:
                             #print("A[j]: ", A[j])
                             #print("S[j]: ", S[j])
                             #print("C[j]: ", C[j])
-                            mov = w * magDelta[j] + random.uniform(0, 1) * A[j] + random.uniform(0, 1) * C[j] + random.uniform(0, 1) * S[j]
+                            mov = w * magDelta[j] + random.uniform(minTesado, maxTesado) * A[j] + random.uniform(minTesado, maxTesado) * C[j] + random.uniform(minTesado, maxTesado) * S[j]
                             magDelta[j] = mov
                             #print("magDelta[j]: ", magDelta[j])
                             #print("Delta_max[j]: ", Delta_max[j])
@@ -311,6 +314,8 @@ class Meta:
                                 magDelta[j] = -1 * Delta_max[j]
 
                             mag[j] = np.array(mag[j]) - np.array(magDelta[j])
+                            mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
+
                             if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                                 mag[j] = min
                     else:
@@ -331,7 +336,7 @@ class Meta:
                         magDelta = np.zeros(3)
                 else:
                     for j in range(3):
-                        magDelta[j] = (a*A[j]+c*C[j]+s*S[j]+f*F[j]+e*E[j]) + w*magDelta[j]
+                        magDelta[j] = (a * A[j] + c * C[j] + s * S[j] + f * F[j] + e * E[j]) + w*magDelta[j]
                         #print("magDelta[j]: ", magDelta[j])
                         #print("Delta_max[j]: ", Delta_max[j])
                         '''
@@ -347,10 +352,12 @@ class Meta:
 
                         mag[j] = np.array(mag[j]) - np.array(magDelta[j])
 
+                        mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
+
                         if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                             mag[j] = min
 
-                #mag = self.checkBounds(mag, lb, ub)
+                mag = self.checkBounds(mag, lb, ub)
 
                 DragonFlies[iDragonFly][0] = orden[0]
                 DragonFlies[iDragonFly][1] = orden[1]
@@ -371,10 +378,16 @@ class Meta:
                     continue
 
                 if newFitness < DragonFlies[iDragonFly][6]:
+                    foodFitness = newFitness
+                    foodPos = mag
                     for j in range(3):
                         DragonFlies[iDragonFly][j] = orden[j] 
                         DragonFlies[iDragonFly][j + 3] = mag[j]
                     DragonFlies[iDragonFly][6] = newFitness
+
+                if newFitness > enemyFitness:
+                    enemyFitness = newFitness
+                    enemyPos = mag
                 
                 print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[iDragonFly][6])
     
