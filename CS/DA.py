@@ -45,18 +45,18 @@ class Meta:
         deltaSolutions = self.deltaSolution
         N = len(solutions) # N DEFINE EL NUMERO DE NIDOS.
 
-        ub = np.ones(3) * max(modelo.numx)
+        ub = np.ones(3) * modelo.tesadoMaximo
         lb = np.ones(3) * modelo.tesadoMinimo
 
-        maxTesado = max(modelo.numx)
+        maxTesado = max(modelo.tesadoMaximo)
         minTesado = modelo.tesadoMinimo
 
         #ub = max(modelo.numx)
         #lb = modelo.tesadoMinimo
 
-        initialRadius = (ub - lb) / 20
+        initialRadius = (ub - lb) / 10
         #print("initialRadius: ", initialRadius)
-        Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 20
+        Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 10
         #print("delta max: ", Delta_max)
 
         foodFitness = float("inf")
@@ -65,12 +65,12 @@ class Meta:
         enemyFitness = -float("inf")
         enemyPos = np.zeros(3)
 
-        fitness = np.array([])
+        fitness = [np.zeros(1) for x in range(self.poblacion)]
 
         DragonFlies = [np.zeros(7) for x in range(self.poblacion)]
         DeltaDragonFlies = [np.zeros(7) for x in range(self.poblacion)]
         
-        for w in range(0, N): #SE RELLENA EL NIDO CON EL ORDEN Y LAS MAGNITUDES DE LAS solutions CREADAS.
+        for w in range(N): #SE RELLENA EL NIDO CON EL ORDEN Y LAS MAGNITUDES DE LAS solutions CREADAS.
             mag2 = solutions[w].magnitud
             orden2 = solutions[w].orden
 
@@ -94,18 +94,13 @@ class Meta:
         while cont1 < self.poblacion:
             star_time = time.time()  # Iniciamos variable para registrar tiempo en cada iteracion
             Registro.write("CALCULO POBLACIoN:" + "," + str(cont1) + ",")  # Registro para el .txt
-            # Mostramos en consola en la iteracion a ejecutar
             print("***POBLACIoN***:  " + str(cont1))
+            
             modelo.cargarPuenteModificado()  # Cargamos Puente Modificado
-            # SE APLICA TESADO A LA solution i
-            #print("solucion: ", solutions[cont1])
             modelo.aplicarTesado([solutions[cont1]])
-            #modelo.aplicarTesado([deltaSolutions[cont1]])
-            # GUARDO EL VALOR DE FITNESS DE solution i  EN NIDOS i
+            
             DragonFlies[cont1][6] = solutions[cont1].calcularFitness(modelo)
 
-            #print("value fitness: ", DragonFlies[cont1][6])
-            #DeltaDragonFlies[cont1][6] = deltaSolutions[cont1].calcularFitness(modelo)
             if DragonFlies[cont1][6] == -1:
                 self.regenerarSolution(modelo, solutions, cont1)
                 cont1 = cont1 - 1
@@ -177,14 +172,9 @@ class Meta:
 
             cont1 = cont1 + 1
 
-        #print("total filas: ", len(self.solutions), " - total columnas: ",len(self.solutions[0].orden+self.solutions[0].magnitud))
-        
+        '''
         arrayFitness = np.array(DragonFlies)
-        #print("arrayFitness: ", arrayFitness)
-        fitness = arrayFitness[:, 6]
-        #print("fitness: ", fitness)
-   
-        fitness = sorted(fitness)
+        fitness = sorted(arrayFitness[:, 6])
 
         foodFitness = fitness[0]
         foodPos = DragonFlies[0][2:5]
@@ -192,6 +182,7 @@ class Meta:
         arrDF = np.array(DragonFlies)
         enemyPos = list(arrDF[len(arrDF) - 1, ])[2:5]
         enemyFitness = fitness[len(fitness) - 1]
+        '''
 
         mag = [0,0,0]
         orden = [0,0,0]
@@ -220,30 +211,39 @@ class Meta:
             totalDragonFlies = len(DragonFlies)
 
             print("total dragonflies: ", totalDragonFlies)
+
+            for i in range(totalDragonFlies):
+                fitness[i] = DragonFlies[i][6]
+                
+                if fitness[i] < foodFitness:
+                    foodFitness = fitness[i]
+                    foodPos = DragonFlies[i][3:6]
+
+                if fitness[i] > enemyFitness:
+                    enemyFitness = fitness[i]
+                    enemyPos = DragonFlies[i][3:6]
    
-            for iDragonFly in range(totalDragonFlies):
+            for i in range(totalDragonFlies):
                 index = 0
                 neighboursNo = 0
 
-                orden = DragonFlies[iDragonFly][0:3]
-                mag = DragonFlies[iDragonFly][3:6]
+                orden = DragonFlies[i][0:3]
+                mag = DragonFlies[i][3:6]
+                magDelta = DeltaDragonFlies[i][3:6]
 
-                print("mag inicial: ", mag, orden)
+                print("mag inicial: ", mag, orden)              
 
-                magDelta = DeltaDragonFlies[iDragonFly][3:6]
-
-                neighboursDelta = [np.zeros(3) for x in range(totalDragonFlies)]
                 neighboursDragonfly = [np.zeros(3) for x in range(totalDragonFlies)]
-
+                neighboursDelta = [np.zeros(3) for x in range(totalDragonFlies)]
+                
                 for j in range(1, totalDragonFlies):
-                    #subMag = DragonFlies[j][3:3]
                     nDelta = DeltaDragonFlies[j][3:6]
-                    nDragonFly = DragonFlies[j][3:6]
+                    nMag = DragonFlies[j][3:6]
         
-                    distanceEc = distance.euclidean(mag, nDragonFly)
-                    if all(distanceEc <= r) and distanceEc is not 0:
+                    distance2Enemy = distance.euclidean(mag, nMag)
+                    if all(distance2Enemy <= r) and distance2Enemy is not 0:
                         neighboursDelta[index] = nDelta
-                        neighboursDragonfly[index] = nDragonFly
+                        neighboursDragonfly[index] = nMag
 
                         index = index + 1
                         neighboursNo = neighboursNo + 1
@@ -268,11 +268,8 @@ class Meta:
                     #C = np.squeeze(np.asarray(C))
                 C = np.array(C) - np.array(mag)
 
-                #Attraction to food
-                #print("mag: ", mag)
-                #cprint("foodPos: ", foodPos)
                 distance2Food = distance.euclidean(mag, foodPos)
-                F = 0
+                F = np.zeros(0)
                 if all(distance2Food <= r):
                     F = np.array(foodPos) - np.array(mag)
 
@@ -280,36 +277,22 @@ class Meta:
                 E = np.zeros(3)
                 if all(distance2Enemy <= r):
                     E = np.array(enemyPos) + np.array(mag)
+
+                for tt in range(3):
+                    if mag[tt] > ub[tt]:
+                        mag[tt] = lb[tt]
+                        magDelta[tt] = random.uniform(minTesado, maxTesado)
+                    if mag[tt] < lb[tt]:
+                        mag[tt] = ub[tt]
+                        magDelta[tt] = random.uniform(minTesado, maxTesado)
                 
                 
-                #print("S: ", S)
-                #print("A: ", A)
-                #print("C: ", C)
-                #print("F: ", F)
-                #print("E: ", E)
-                
-                if all(distance2Food > r):
+                if any(distance2Food > r):
                     if neighboursNo > 1:
                         for j in range(3):
-                            #print("levy: ", self.levy(3))
-                            #print("magDelta[j]: ", magDelta[j])
-                            #print("w: ", w)
-                            #print("random.uniform(lb, ub): ", random.uniform(lb, ub))
-                            #print("A[j]: ", A[j])
-                            #print("S[j]: ", S[j])
-                            #print("C[j]: ", C[j])
-                            mov = w * magDelta[j] + random.uniform(minTesado, maxTesado) * A[j] + random.uniform(minTesado, maxTesado) * C[j] + random.uniform(minTesado, maxTesado) * S[j]
-                            magDelta[j] = mov
-                            #print("magDelta[j]: ", magDelta[j])
-                            #print("Delta_max[j]: ", Delta_max[j])
-                            '''
-                            if (magDelta[j] > Delta_max[j]):
-                                magDelta[j] = Delta_max[j]
-
-                            if (magDelta[j] < -1 * Delta_max[j]):
-                                magDelta[j] = -1 * Delta_max[j]
-                            '''
-
+   
+                            magDelta[j] = w * magDelta[j] + random.uniform(minTesado, maxTesado) * A[j] + random.uniform(minTesado, maxTesado) * C[j] + random.uniform(minTesado, maxTesado) * S[j]
+    
                             if (magDelta[j] < -1 * Delta_max[j]):
                                 magDelta[j] = -1 * Delta_max[j]
 
@@ -323,29 +306,10 @@ class Meta:
                         z = randint(0, npend - 1)
                         orden = self.permutaciones[z]
 
-                        #solution = Solution(orden, mag)
-                        
-                        #DragonFlies[iDragonFly][3] = mag[0]
-                        #DragonFlies[iDragonFly][4] = mag[1]
-                        #DragonFlies[iDragonFly][5] = mag[2]
-
-                        #modelo.cargarPuenteModificado()
-                        #Aplicamos tesado en función a Solution
-                        #modelo.aplicarTesado([solution])
-
                         magDelta = np.zeros(3)
                 else:
                     for j in range(3):
                         magDelta[j] = (a * A[j] + c * C[j] + s * S[j] + f * F[j] + e * E[j]) + w*magDelta[j]
-                        #print("magDelta[j]: ", magDelta[j])
-                        #print("Delta_max[j]: ", Delta_max[j])
-                        '''
-                        if (magDelta[j] > Delta_max[j]):
-                            magDelta[j] = Delta_max[j]
-
-                        if (magDelta[j] < -1 * Delta_max[j]):
-                            magDelta[j] = -1 * Delta_max[j]
-                        '''
 
                         if (magDelta[j] < -1 * Delta_max[j]):
                             magDelta[j] = -1 * Delta_max[j]
@@ -359,13 +323,13 @@ class Meta:
 
                 mag = self.checkBounds(mag, lb, ub)
 
-                DragonFlies[iDragonFly][0] = orden[0]
-                DragonFlies[iDragonFly][1] = orden[1]
-                DragonFlies[iDragonFly][2] = orden[2]
+                DragonFlies[i][0] = orden[0]
+                DragonFlies[i][1] = orden[1]
+                DragonFlies[i][2] = orden[2]
             
-                DragonFlies[iDragonFly][3] = mag[0]
-                DragonFlies[iDragonFly][4] = mag[1]
-                DragonFlies[iDragonFly][5] = mag[2]
+                DragonFlies[i][3] = mag[0]
+                DragonFlies[i][4] = mag[1]
+                DragonFlies[i][5] = mag[2]
                 
                 print("mag final: ", mag, orden)
                 solution = Solution(orden, mag)
@@ -374,22 +338,17 @@ class Meta:
                 newFitness = solution.calcularFitness(modelo)
 
                 if newFitness == -1:
-                    iDragonFly = iDragonFly - 1
+                    i = i - 1
                     continue
 
-                if newFitness < DragonFlies[iDragonFly][6]:
-                    foodFitness = newFitness
-                    foodPos = mag
+                if newFitness < DragonFlies[i][6]:
                     for j in range(3):
-                        DragonFlies[iDragonFly][j] = orden[j] 
-                        DragonFlies[iDragonFly][j + 3] = mag[j]
-                    DragonFlies[iDragonFly][6] = newFitness
+                        DragonFlies[i][j] = orden[j] 
+                        DragonFlies[i][j + 3] = mag[j]
+                    DragonFlies[i][6] = newFitness
 
-                if newFitness > enemyFitness:
-                    enemyFitness = newFitness
-                    enemyPos = mag
                 
-                print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[iDragonFly][6])
+                #print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[i][6])
     
             #Ordenamos la Poblacion de menos a mayor
             DragonFlies= sorted(DragonFlies, key=lambda x: x[6], reverse= False) 
