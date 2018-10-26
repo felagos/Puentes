@@ -1,0 +1,1258 @@
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:26
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           4
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:26
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        08:02:26
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =        1319
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =       17850
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ L I N E A R   S T A T I C   C A S E S                                  08:02:26
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF CASES TO SOLVE            =           2
+ NUMBER OF CASES TO SOLVE PER BLOCK        =           2
+
+ LINEAR STATIC CASES TO BE SOLVED:
+
+ CASE: DEAD
+ CASE: TEMP
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:26
+
+ CASE: LCASE1
+
+ STARTING FROM ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF STAGES                          =          14
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+ CASE: LCASE1
+ STAGE LABEL: Deck
+ STAGE NUMBER 1 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   0.003762   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Sidelwalk
+ STAGE NUMBER 2 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   0.000105   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Towers
+ STAGE NUMBER 3 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Arch_1
+ STAGE NUMBER 4 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   0.000580   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Arch_2
+ STAGE NUMBER 5 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1         -1  72102.985   1.000000    .000000    .000000
+      1       0       1         -2  72105.044   1.000000    .000000    .000000
+      1       0       1         -3  71932.859   1.000000    .000000    .000000
+      1       0       1         -4  71932.835   1.000000    .000000    .000000
+      1       0       1         -5  71933.835   1.000000    .000000    .000000
+      1       0       1         -6  71933.835   1.000000    .000000    .000000
+      1       0       1          1  44479.553   1.000000    .000000    .000000
+      1       0       1  Conv    2   0.002346   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Link
+ STAGE NUMBER 6 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          = REMOVE ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   6.30E-06   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Tendon
+ STAGE NUMBER 7 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1         -1 617.277227   1.000000    .000000    .000000
+      1       0       1         -2   1148.795   1.000000    .000000    .000000
+      1       0       1         -3   1144.607   1.000000    .000000    .000000
+      1       0       1         -4   1140.452   1.000000    .000000    .000000
+      1       0       1         -5   1136.329   1.000000    .000000    .000000
+      1       0       1         -6   1132.238   1.000000    .000000    .000000
+      1       0       1         -7   1128.179   1.000000    .000000    .000000
+      1       0       1         -8   1124.152   1.000000    .000000    .000000
+      1       0       1         -9   1120.156   1.000000    .000000    .000000
+      1       0       1        -10   1116.191   1.000000    .000000    .000000
+      1       0       1          1   1155.379   1.000000    .000000    .000000
+      1       0       1          2 1.2660E+08   1.000000    .000000    .000000
+      1       0       1          3 1.1782E+07   1.000000    .000000    .000000
+      1       0       1          4 6.7473E+07   1.000000    .000000    .000000
+      1       0       1  Conv    5   0.000966   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Remove tower
+ STAGE NUMBER 8 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          = REMOVE ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   4.39E-06   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Hanger retain_1
+ STAGE NUMBER 9 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Hanger retain_2
+ STAGE NUMBER 10 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Network Hanger_1
+ STAGE NUMBER 11 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   0.074792   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Network Hanger_2
+ STAGE NUMBER 12 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   0.091758   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Network Hanger_3
+ STAGE NUMBER 13 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   0.121379   1.000000   1.000000   1.000000
+
+ CASE: LCASE1
+ STAGE LABEL: Network Hanger_4
+ STAGE NUMBER 14 OF 14 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1   0.215517   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =          20
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.00
+ TIME FOR CONTROLLING ANALYSIS             =        0.08
+ TIME FOR UPDATING LOADS AND STATE         =        0.60
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.00
+ TIME FOR SOLVING STIFFNESS MATRIX         =        1.28
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.56
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.03
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        2.55
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:29
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.05
+ TIME FOR CONTROLLING ANALYSIS             =        0.07
+ TIME FOR UPDATING LOADS AND STATE         =        0.10
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.04
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.34
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.01
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.02
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        0.63
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:30
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:32
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:32
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:32
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.19
+ TIME FOR CONTROLLING ANALYSIS             =        0.05
+ TIME FOR UPDATING LOADS AND STATE         =        0.11
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.02
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.51
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.06
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.14
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        1.08
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:33
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:36
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           6
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:36
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:37
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.16
+ TIME FOR CONTROLLING ANALYSIS             =        0.07
+ TIME FOR UPDATING LOADS AND STATE         =        0.13
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.00
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.38
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.04
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.06
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        0.84
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:38
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:40
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           7
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:40
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:40
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.14
+ TIME FOR CONTROLLING ANALYSIS             =        0.08
+ TIME FOR UPDATING LOADS AND STATE         =        0.08
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.00
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.32
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.04
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.13
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        0.79
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:41
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:44
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           8
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:44
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:44
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.25
+ TIME FOR CONTROLLING ANALYSIS             =        0.05
+ TIME FOR UPDATING LOADS AND STATE         =        0.14
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.00
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.33
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.05
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.12
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        0.94
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:45
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:47
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           9
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:47
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:47
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.12
+ TIME FOR CONTROLLING ANALYSIS             =        0.06
+ TIME FOR UPDATING LOADS AND STATE         =        0.09
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.00
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.30
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.03
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.12
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        0.72
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:48
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Modificado\PuenteMod.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/26  08:02:51
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         227
+    WITH RESTRAINTS                        =          13
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         428
+ NUMBER OF LOAD PATTERNS                   =         187
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =          10
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.912 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           2
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           2
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           2
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           2
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           2
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      08:02:51
+
+ CASE: TCASE0
+
+ CONTINUING FROM THE END OF CASE: LCASE1
+
+ NUMBER OF STAGES                          =           3
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      08:02:51
+
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger0
+ STAGE NUMBER 1 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger1
+ STAGE NUMBER 2 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ CASE: TCASE0
+ STAGE LABEL: Hanger2
+ STAGE NUMBER 3 OF 3 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =        NONE
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      1       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           4
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.09
+ TIME FOR CONTROLLING ANALYSIS             =        0.05
+ TIME FOR UPDATING LOADS AND STATE         =        0.07
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.04
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.32
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.02
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.16
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        0.75
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/26  08:02:52

@@ -54,8 +54,6 @@ class Meta:
         #ub = max(modelo.numx)
         #lb = modelo.tesadoMinimo
 
-        initialRadius = (ub - lb) / 10
-        #print("initialRadius: ", initialRadius)
         Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 10
         #print("delta max: ", Delta_max)
 
@@ -66,6 +64,7 @@ class Meta:
         enemyPos = np.zeros(3)
 
         fitness = [np.zeros(1) for x in range(self.poblacion)]
+        bestOrden = np.zeros(3)
 
         DragonFlies = [np.zeros(7) for x in range(self.poblacion)]
         DeltaDragonFlies = [np.zeros(7) for x in range(self.poblacion)]
@@ -88,7 +87,6 @@ class Meta:
         modelo.abrirSAP()
 
         Registro = open("Registro.txt", "w")  # CREA EL ARCHIVO DE REGISTRO
-        RegPoblacion = open("Poblacion.txt", "w")
 
         cont1 = 0
         while cont1 < self.poblacion:
@@ -105,16 +103,6 @@ class Meta:
                 self.regenerarSolution(modelo, solutions, cont1)
                 cont1 = cont1 - 1
                 continue
-            '''
-            if DragonFlies[cont1][6] < foodFitness:
-                foodFitness = DragonFlies[cont1][6]
-                foodPos = DragonFlies[cont1]
-            
-            if DragonFlies[cont1][6] > enemyFitness:
-                if True:
-                    enemyFitness = DragonFlies[cont1][6]
-                    enemyPos = DragonFlies[cont1]
-            '''
 
             '''REMUEVO Y CAMBIO ARCHIVOS CORRESPONDIENTES PARA EVITAR TIEMPOS DE CALCULOS EXPONENCIALES'''
             os.remove('C:\Puentes\Modificado\PuenteMod.Y08')
@@ -155,14 +143,6 @@ class Meta:
             Registro.write("T3" + "," + str(DragonFlies[cont1][5]) + ",")
             Registro.write("FIT" + "," + str(DragonFlies[cont1][6]) + ",")
 
-            RegPoblacion.write("P1" + "," + str(DragonFlies[cont1][0]) + ",")
-            RegPoblacion.write("P2" + "," + str(DragonFlies[cont1][1]) + ",")
-            RegPoblacion.write("P3" + "," + str(DragonFlies[cont1][2]) + ",")
-            RegPoblacion.write("T1" + "," + str(DragonFlies[cont1][3]) + ",")
-            RegPoblacion.write("T2" + "," + str(DragonFlies[cont1][4]) + ",")
-            RegPoblacion.write("T3" + "," + str(DragonFlies[cont1][5]) + ",")
-            RegPoblacion.write("FIT" + "," + str(DragonFlies[cont1][6]) + "\n\n")
-
             # Registro de tiempo por calculo de cada individuo de la poblacion
             tiempototaliteracion = time.time() - star_time
             # Mostramos Tiempo del calculo de cada individuo de la poblacion
@@ -172,34 +152,22 @@ class Meta:
 
             cont1 = cont1 + 1
 
-        '''
-        arrayFitness = np.array(DragonFlies)
-        fitness = sorted(arrayFitness[:, 6])
-
-        foodFitness = fitness[0]
-        foodPos = DragonFlies[0][2:5]
-
-        arrDF = np.array(DragonFlies)
-        enemyPos = list(arrDF[len(arrDF) - 1, ])[2:5]
-        enemyFitness = fitness[len(fitness) - 1]
-        '''
-
         mag = [0,0,0]
         orden = [0,0,0]
         
         '''LOOP ALGORITMO'''
-        i = 0
-        while i <= self.iteraciones:
+        iteraciones = 0
+        while iteraciones <= self.iteraciones:
             min = modelo.tesadoMinimo
             star_time = time.time() #Registro de tiempo
             modelo.cargarPuenteModificado()
             npend = DATOS_TESADO["NumPendolas"]
 
-            r = (ub - lb) / 4 + (( ub - lb) * ( i / self.iteraciones ) * 2)
+            r = (ub - lb) / 4 + (( ub - lb) * ( iteraciones / self.iteraciones ) * 2)
 
-            w = float(0.9 - i * ((0.9 - 0.4) / self.iteraciones))
+            w = float(0.9 - iteraciones * ((0.9 - 0.4) / self.iteraciones))
 
-            my_c = float(0.1 - i * (( 0.1 - 0) / (self.iteraciones / 2)))
+            my_c = float(0.1 - iteraciones * (( 0.1 - 0) / (self.iteraciones / 2)))
             my_c = 0 if my_c < 0 else my_c
             
             s = 2 * random.uniform(minTesado, maxTesado) * my_c # Seperation weight
@@ -231,7 +199,7 @@ class Meta:
                 mag = DragonFlies[i][3:6]
                 magDelta = DeltaDragonFlies[i][3:6]
 
-                print("mag inicial: ", mag, orden)              
+                print("inicial: ", mag, orden)              
 
                 neighboursDragonfly = [np.zeros(3) for x in range(totalDragonFlies)]
                 neighboursDelta = [np.zeros(3) for x in range(totalDragonFlies)]
@@ -309,7 +277,7 @@ class Meta:
                         magDelta = np.zeros(3)
                 else:
                     for j in range(3):
-                        magDelta[j] = (a * A[j] + c * C[j] + s * S[j] + f * F[j] + e * E[j]) + w*magDelta[j]
+                        magDelta[j] = (a * A[j] + c * C[j] + s * S[j] + f * F[j] + e * E[j]) - w * magDelta[j]
 
                         if (magDelta[j] < -1 * Delta_max[j]):
                             magDelta[j] = -1 * Delta_max[j]
@@ -321,37 +289,42 @@ class Meta:
                         if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                             mag[j] = min
 
-                mag = self.checkBounds(mag, lb, ub)
-
+                #mag = self.checkBounds(mag, lb, ub, minTesado, maxTesado)
+                
+                DeltaDragonFlies[i][3] = magDelta[0]
+                DeltaDragonFlies[i][4] = magDelta[1]
+                DeltaDragonFlies[i][5] = magDelta[2]
+                '''
                 DragonFlies[i][0] = orden[0]
                 DragonFlies[i][1] = orden[1]
                 DragonFlies[i][2] = orden[2]
-            
+
                 DragonFlies[i][3] = mag[0]
                 DragonFlies[i][4] = mag[1]
                 DragonFlies[i][5] = mag[2]
-                
-                print("mag final: ", mag, orden)
+                '''
+
+                print("final: ", mag, orden)
                 solution = Solution(orden, mag)
 
                 modelo.aplicarTesado([solution])  #Se aplica tension en la nueva solution con vuelo de Levy
                 newFitness = solution.calcularFitness(modelo)
 
                 if newFitness == -1:
-                    i = i - 1
+                    iteraciones = iteraciones - 1
                     continue
-
+                
+                print("new fitness: ", newFitness, " - current fitness: ", DragonFlies[i][6], "\n")
+   
                 if newFitness < DragonFlies[i][6]:
+                    print("MENOR !!!")
                     for j in range(3):
                         DragonFlies[i][j] = orden[j] 
                         DragonFlies[i][j + 3] = mag[j]
                     DragonFlies[i][6] = newFitness
-
-                
-                #print("\nnew fitness: ", newFitness, " - current fitness: ", DragonFlies[i][6])
     
             #Ordenamos la Poblacion de menos a mayor
-            DragonFlies= sorted(DragonFlies, key=lambda x: x[6], reverse= False) 
+            #DragonFlies= sorted(DragonFlies, key=lambda x: x[6], reverse= False) 
 
             #se incrementa el indice de las iteraciones
 
@@ -384,26 +357,25 @@ class Meta:
             os.remove('C:\Puentes\Modificado\PuenteMod.$2K')
             os.remove('C:\Puentes\Modificado\PuenteMod.OUT')
 
-            print("EL MEJOR NIDO DE ESTA ITERACION ES: " + str(DragonFlies[0][6]))
-            print(DragonFlies[0]) 
+            print("EL MEJOR NIDO DE ESTA ITERACION ", iteraciones, " ES: ", foodFitness)
 
             tiempototaliteracion = time.time() - star_time #Registro de tiempo por calculo de cada Iteracion
             print('EL TIEMPO DE ESTA ITERACIoN ' + str(i) + ' FUE: ' + str(tiempototaliteracion))
         
             '''GUARDO LA INFORMACIoN OBTENIDA EN "Registro.txt"'''
             Registro.write("ITERACION:" + "," + str(i) + ",")
-            Registro.write("P1" + "," + str(DragonFlies[0][0]) + ",")
-            Registro.write("P2" + "," + str(DragonFlies[0][1]) + ",")
-            Registro.write("P3" + "," + str(DragonFlies[0][2]) + ",")
-            Registro.write("T1" + "," + str(DragonFlies[0][3]) + ",")
-            Registro.write("T2" + "," + str(DragonFlies[0][4]) + ",")
-            Registro.write("T3" + "," + str(DragonFlies[0][5]) + ",")
-            Registro.write("FIT" + "," + str(DragonFlies[0][6]) + ",")
-            Registro.write("Tiempo de iteracion" + "," + str(tiempototaliteracion) + ",\n")
+            Registro.write("P1" + "," + str(orden[0]) + ",")
+            Registro.write("P2" + "," + str(orden[1]) + ",")
+            Registro.write("P3" + "," + str(orden[2]) + ",")
+            Registro.write("T1:" + str(foodPos[0]) + ", ")
+            Registro.write("T2:" + str(foodPos[1]) + ", ")
+            Registro.write("T3:" + str(foodPos[2]) + ", ")
+            Registro.write("FIT:" + str(foodFitness) + ", ")
+            Registro.write("Tiempo de iteracion: " + str(tiempototaliteracion) + ",\n")
 
-            print("iteracion: ", i)
+            print("iteracion: ", iteraciones)
 
-            i = i + 1
+            iteraciones = iteraciones + 1
         
 
     def getSolution(self, min, npend, modelo, mag):
@@ -473,22 +445,32 @@ class Meta:
         step = u/abs(v)**(1/beta)
         return 0.01 * step
 
-    def checkBounds(self, position, lowerBound, upperBound):
+    def checkBounds(self, position, lowerBound, upperBound, minTesado, maxTesado):
         position = np.array(position)
         upperBound = np.array(upperBound)
         lowerBound = np.array(lowerBound)
 
-        check1 = position > upperBound
-        check2 = position < lowerBound
+        check1 = np.ones(len(position))
+        check2 = np.ones(len(position))
 
-        for i in range(len(check1)):
-            check1[i] = 1 if check1[i] is True else 0
-            check2[i] = 1 if check1[i] is True else 0
-        
+        for i in range(len(position)):
+            if position[i] > upperBound[i]:
+                check1[i] = maxTesado
+            else:
+                check1[i] = minTesado
+            
+            if position[i] < lowerBound[i]:
+                check2[i] = minTesado
+            else:
+                check2[i] = maxTesado
+
+
         temp = check1 + check2
+        '''
         for i in range(len(temp)):
             temp[i] = 1 if temp[i] is 0 else 1
-        
-        result = (position * temp) + upperBound * check1 + lowerBound * check2
+        '''
 
+        result = (position * temp) + upperBound * check1 + lowerBound * check2
+        
         return result
