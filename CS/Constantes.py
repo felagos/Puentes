@@ -25,9 +25,14 @@ DATOS_TESADO = {
 #Datos de la metahuristica.
 DATOS_MH = {
     "Pa": 1,
+    "Poblacion": 5,
+    "Iteraciones": 2, 
+    "Alpha": 0.000001,
+}
+
+DATOS_MH_DA = {
     "Poblacion": 10,
-    "Iteraciones": 30, 
-    "Alpha": 0.000001
+    "Iteraciones": 30
 }
 
 
