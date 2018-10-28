@@ -1,6 +1,6 @@
 from SAP2000 import SAP2000
 from DA import Meta
-from Constantes import DATOS_TESADO,DATOS_MH
+from Constantes import DATOS_TESADO,DATOS_MH_DA
 from Solution import Solution
 import time
 
@@ -55,7 +55,7 @@ print("fcmax2:                          "+str(modelo.fcmax2))
 
 
 print("\nSe procede a aplicar tesado")
-MT = Meta(DATOS_MH["Poblacion"], DATOS_MH["Iteraciones"])
+MT = Meta(DATOS_MH_DA["Poblacion"], DATOS_MH_DA["Iteraciones"])
 valor = MT.Metaheuristic(modelo)
 
 

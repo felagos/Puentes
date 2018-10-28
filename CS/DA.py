@@ -7,7 +7,7 @@ from Solution import Solution
 import random
 import math
 import copy
-from Constantes import DATOS_TESADO, DATOS_MH
+from Constantes import DATOS_TESADO, DATOS_MH_DA
 from random import shuffle
 from itertools import permutations
 from random import randint
@@ -90,6 +90,7 @@ class Meta:
 
         cont1 = 0
         while cont1 < self.poblacion:
+            print("minimo: ",modelo.tesadoMinimo)
             star_time = time.time()  # Iniciamos variable para registrar tiempo en cada iteracion
             Registro.write("CALCULO POBLACIoN:" + "," + str(cont1) + ",")  # Registro para el .txt
             print("***POBLACIoN***:  " + str(cont1))
@@ -239,7 +240,7 @@ class Meta:
                 distance2Food = distance.euclidean(mag, foodPos)
                 F = np.zeros(0)
                 if all(distance2Food <= r):
-                    F = np.array(foodPos) - np.array(mag)
+                    F = np.array(mag) - np.array(foodPos)
 
                 distance2Enemy = distance.euclidean(mag, enemyPos)
                 E = np.zeros(3)
@@ -254,7 +255,6 @@ class Meta:
                         mag[tt] = ub[tt]
                         magDelta[tt] = random.uniform(minTesado, maxTesado)
                 
-                
                 if any(distance2Food > r):
                     if neighboursNo > 1:
                         for j in range(3):
@@ -264,7 +264,7 @@ class Meta:
                             if (magDelta[j] < -1 * Delta_max[j]):
                                 magDelta[j] = -1 * Delta_max[j]
 
-                            mag[j] = np.array(mag[j]) - np.array(magDelta[j])
+                            mag[j] = np.array(mag[j]) + np.array(magDelta[j])
                             mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
 
                             if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
@@ -282,15 +282,13 @@ class Meta:
                         if (magDelta[j] < -1 * Delta_max[j]):
                             magDelta[j] = -1 * Delta_max[j]
 
-                        mag[j] = np.array(mag[j]) - np.array(magDelta[j])
+                        mag[j] = np.array(mag[j]) + np.array(magDelta[j])
 
                         mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
 
                         if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
                             mag[j] = min
-
-                #mag = self.checkBounds(mag, lb, ub, minTesado, maxTesado)
-                
+               
                 DeltaDragonFlies[i][3] = magDelta[0]
                 DeltaDragonFlies[i][4] = magDelta[1]
                 DeltaDragonFlies[i][5] = magDelta[2]
@@ -455,14 +453,14 @@ class Meta:
 
         for i in range(len(position)):
             if position[i] > upperBound[i]:
-                check1[i] = maxTesado
+                check1[i] = 1
             else:
-                check1[i] = minTesado
+                check1[i] = 0
             
             if position[i] < lowerBound[i]:
-                check2[i] = minTesado
+                check2[i] = 0
             else:
-                check2[i] = maxTesado
+                check2[i] = 1
 
 
         temp = check1 + check2
