@@ -22,7 +22,7 @@ print("Listo!\n")
 
 #obtener datos puente original
 print("Obteniendo info del puente original...")
-modeloOriginal = modelo.getInfoModeloOriginal()
+modelo.getInfoModeloOriginal()
 print("Listo!\n")
 
 
@@ -56,13 +56,13 @@ print("fcmax2:                          "+str(modelo.fcmax2))
 
 print("\nSe procede a aplicar tesado")
 MT = Meta(DATOS_MH_DA["Poblacion"], DATOS_MH_DA["Iteraciones"])
-valor = MT.Metaheuristic(modelo)
+MT.Metaheuristic(modelo)
 
 
 '''
 #Tesado de prueba
-orden = [1, 2, 3]
-mag = [2.340070389, 1.236889534, 1.579377348]
+orden = [2, 1, 3]
+mag = [2.39139656, 0.05445185, 0.05445185]
 solution = Solution(orden,mag)
 st = [solution]
 modelo.aplicarTesado(st)
