@@ -4637,3 +4637,1363 @@
 
 
  A N A L Y S I S   C O M P L E T E                          2018/10/23  23:21:41
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  09:54:55
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      09:54:55
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        09:54:55
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      09:54:55
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  09:54:55
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  10:01:59
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      10:01:59
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        10:01:59
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      10:01:59
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  10:01:59
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  10:08:57
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      10:08:57
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        10:08:57
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      10:08:57
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  10:08:57
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  10:33:28
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      10:33:28
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        10:33:28
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      10:33:28
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  10:33:28
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  12:38:15
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      12:38:15
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        12:38:15
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      12:38:15
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  12:38:15
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  12:40:35
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      12:40:35
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        12:40:35
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      12:40:35
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  12:40:35
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  12:42:26
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      12:42:26
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        12:42:26
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      12:42:26
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  12:42:27
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  13:04:03
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      13:04:03
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        13:04:03
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      13:04:03
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  13:04:03
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  13:27:56
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      13:27:56
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        13:27:56
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      13:27:57
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  13:27:57
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  13:35:12
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      13:35:12
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        13:35:12
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      13:35:12
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  13:35:12
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  13:55:29
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      13:55:29
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        13:55:29
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      13:55:29
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  13:55:29
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  14:50:00
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      14:50:00
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        14:50:00
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      14:50:00
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  14:50:00
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  15:43:38
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      15:43:38
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        15:43:38
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      15:43:38
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  15:43:38
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  16:18:22
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      16:18:22
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:18:22
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:18:22
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  16:18:22
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  16:40:18
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      16:40:18
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:40:18
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:40:18
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  16:40:18
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  16:50:29
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      16:50:29
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:50:29
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:50:29
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  16:50:29
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  17:19:39
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      17:19:39
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        17:19:39
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      17:19:39
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  17:19:39
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  17:26:46
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      17:26:46
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        17:26:46
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      17:26:46
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  17:26:46
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  17:36:53
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      17:36:53
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        17:36:53
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      17:36:53
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  17:36:53
+
+
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)
+ File: C:\Puentes\Original\PuenteOrig.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2018/10/28  17:39:56
+
+
+ RUNNING ANALYSIS WITHIN THE GUI PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =         122
+    WITH RESTRAINTS                        =           9
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =         191
+ NUMBER OF LOAD PATTERNS                   =           3
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =           5
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =      15.950 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           4
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           4
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           4
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           4
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           4
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           4
+
+
+ E L E M E N T   F O R M A T I O N                                      17:39:56
+
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        17:39:56
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =         702
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =        9049
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      17:39:56
+
+ CASE: CAMION
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           0
+
+
+ NUMBER OF OUTPUT STEPS SAVED              =           0
+
+
+ A N A L Y S I S   C O M P L E T E                          2018/10/28  17:39:56
