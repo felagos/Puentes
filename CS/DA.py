@@ -40,7 +40,6 @@ class Meta:
 
         '''***INICIALIZACIoN POBLACION***'''
         self.poblacionInicial(modelo, False) # SE CREAN LA POBLACIoN INICIAL (ORDEN Y MAGNITUDES).
-        #self.poblacionInicial(modelo, True) # SE CREA UNA SEGUNDA POBLACION NECESARIO PARA LA MH.
         solutions = self.solutions # SE GUARDAN LA POBLACIoN CREADA EN solutions.
         deltaSolutions = self.deltaSolution
         N = len(solutions) # N DEFINE EL NUMERO DE NIDOS.
@@ -55,7 +54,6 @@ class Meta:
         #lb = modelo.tesadoMinimo
 
         Delta_max= (np.ones(3) * ub - np.ones(3) * lb) / 10
-        #print("delta max: ", Delta_max)
 
         foodFitness = float("inf")
         foodPos = np.zeros(3)
@@ -152,14 +150,6 @@ class Meta:
             Registro.write("Tiempo de Poblacion: " + str(tiempototaliteracion) + ",\n")
 
             cont1 = cont1 + 1
-        
-        Log = open("Fitness.txt", "w")
-        #DragonFlies= sorted(DragonFlies, key=lambda x: x[6], reverse= False) 
-        for i in range(self.poblacion):
-            log = "Fitness iteracion %d: %d\n" %(i, DragonFlies[i][6])
-            Log.write(log)
-        Log.close()
-
 
         mag = [0, 0, 0]
         orden = [0, 0, 0]
@@ -234,13 +224,11 @@ class Meta:
                 A = magDelta
                 if neighboursNo > 1:
                     A = np.array(neighboursDragonfly).sum(axis=0) / neighboursNo
-                    #A = np.squeeze(np.asarray(A))
                 
                 #Cohesion
                 C = mag
                 if neighboursNo > 1:
                     C = np.array(neighboursDragonfly).sum(axis=0) / neighboursNo
-                    #C = np.squeeze(np.asarray(C))
                 C = np.array(C) - np.array(mag)
 
                 distance2Food = distance.euclidean(mag, foodPos)
@@ -281,27 +269,6 @@ class Meta:
                         orden = self.permutaciones[z]
 
                         magDelta = np.zeros(3)
-                    '''
-                    if neighboursNo > 1:
-                        for j in range(3):
-   
-                            magDelta[j] = w * magDelta[j] - random.uniform(minTesado, maxTesado) * A[j] - random.uniform(minTesado, maxTesado) * C[j] - random.uniform(minTesado, maxTesado) * S[j]
-    
-                            if (magDelta[j] < -1 * Delta_max[j]):
-                                magDelta[j] = -1 * Delta_max[j]
-
-                            mag[j] = np.array(mag[j]) - np.array(magDelta[j])
-                            mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
-
-                            if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
-                                mag[j] = min
-                    else:
-                        mag = np.array(mag) + self.levy(3) * np.array(mag)
-                        z = randint(0, npend - 1)
-                        orden = self.permutaciones[z]
-
-                        magDelta = np.zeros(3)
-                     '''
 
                 else:
                     mag = np.array(mag) + self.levy(3) * np.array(mag)
@@ -310,33 +277,11 @@ class Meta:
 
                     magDelta = np.zeros(3)
                         
-                    '''
-                    for j in range(3):
-                        magDelta[j] = (a * A[j] - c * C[j] - s * S[j] - f * F[j] - e * E[j]) - w * magDelta[j]
-
-                        if (magDelta[j] < -1 * Delta_max[j]):
-                            magDelta[j] = -1 * Delta_max[j]
-
-                        mag[j] = np.array(mag[j]) - np.array(magDelta[j])
-
-                        mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
-
-                        if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
-                            mag[j] = min
-                    '''
                
                 DeltaDragonFlies[i][3] = magDelta[0]
                 DeltaDragonFlies[i][4] = magDelta[1]
                 DeltaDragonFlies[i][5] = magDelta[2]
-                '''
-                DragonFlies[i][0] = orden[0]
-                DragonFlies[i][1] = orden[1]
-                DragonFlies[i][2] = orden[2]
 
-                DragonFlies[i][3] = mag[0]
-                DragonFlies[i][4] = mag[1]
-                DragonFlies[i][5] = mag[2]
-                '''
 
                 print("final: ", mag, orden)
                 solution = Solution(orden, mag)
@@ -347,7 +292,8 @@ class Meta:
                 if newFitness == -1:
                     iteraciones = iteraciones - 1
                     continue
-                print("newfitness: ", newFitness)
+                
+                #print("newfitness: ", newFitness)
                 print("new fitness: ", newFitness, " - current fitness: ", DragonFlies[i][6], "\n")
    
                 if newFitness <= DragonFlies[i][6]:
@@ -356,9 +302,6 @@ class Meta:
                         DragonFlies[i][j] = orden[j] 
                         DragonFlies[i][j + 3] = mag[j]
                     DragonFlies[i][6] = newFitness
-    
-            #Ordenamos la Poblacion de menos a mayor
-            #DragonFlies= sorted(DragonFlies, key=lambda x: x[6], reverse= False) 
 
             #se incrementa el indice de las iteraciones
 
@@ -435,13 +378,7 @@ class Meta:
             for j in range (npend):
                 mag.append(random.uniform(min, modelo.tesadoMaximo[j]))
                 mag2.append(random.uniform(min, modelo.tesadoMaximo[j]))
-            #for j in range (npend):
-            #    mag.append(random.uniform(min, modelo.tesadoMaximo[j])) #La magnitud esta entre min y max
 
-            #Se crean orden por permutaciones
-            #z = randint(0, npend-1)
-            #orden = self.permutaciones[z]
-            #solution = Solution(orden, mag)     #Solution
             z = randint(0, npend-1)
             orden = self.permutaciones[z]
             solution = Solution(orden, mag)     #Solution
@@ -451,11 +388,6 @@ class Meta:
             orden2 = self.permutaciones[z2]
             solution = Solution(orden2, mag2)   
             self.deltaSolution.append(solution)
-
-            ##if forDelta is False:
-            #    self.solutions.append(solution)     #Solutions
-            #else:
-            #    self.deltaSolution.append(solution)
 
     def regenerarSolution(self, modelo, solutions, cont1):
         npend = DATOS_TESADO["NumPendolas"] #Obtener el numero de pendolas de nuestra instancia
@@ -479,32 +411,3 @@ class Meta:
         step = u/abs(v)**(1/beta)
         return 0.01 * step
 
-    def checkBounds(self, position, lowerBound, upperBound, minTesado, maxTesado):
-        position = np.array(position)
-        upperBound = np.array(upperBound)
-        lowerBound = np.array(lowerBound)
-
-        check1 = np.ones(len(position))
-        check2 = np.ones(len(position))
-
-        for i in range(len(position)):
-            if position[i] > upperBound[i]:
-                check1[i] = 1
-            else:
-                check1[i] = 0
-            
-            if position[i] < lowerBound[i]:
-                check2[i] = 0
-            else:
-                check2[i] = 1
-
-
-        temp = check1 + check2
-        '''
-        for i in range(len(temp)):
-            temp[i] = 1 if temp[i] is 0 else 1
-        '''
-
-        result = (position * temp) + upperBound * check1 + lowerBound * check2
-        
-        return result
