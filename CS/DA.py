@@ -50,6 +50,9 @@ class Meta:
         maxTesado = max(modelo.tesadoMaximo)
         minTesado = 0
 
+        maxIterSameFitness = 10
+        countSameFitness = 0
+
         #ub = max(modelo.numx)
         #lb = modelo.tesadoMinimo
 
@@ -276,6 +279,21 @@ class Meta:
                     orden = self.permutaciones[z]
 
                     magDelta = np.zeros(3)
+
+                if foodFitness == fitness[i - 1] and countSameFitness == maxIterSameFitness:
+                    countSameFitness = 0
+                    print("MISMA SOLUCION !!!")
+                    for j in range(3):
+                        magDelta[j] = w * magDelta[j] + random.uniform(minTesado, maxTesado) * A[j] + random.uniform(minTesado, maxTesado) * C[j] + random.uniform(minTesado, maxTesado) * S[j]
+
+                        if (magDelta[j] < -1 * Delta_max[j]):
+                            magDelta[j] = -1 * Delta_max[j]
+
+                        mag[j] = np.array(mag[j]) - np.array(magDelta[j])
+                        mag[j] = -1 * mag[j] if mag[j] < 0 else mag[j]
+
+                        if mag[j] > modelo.tesadoMaximo[j]: #Si la nueva mag es mayor al max, utilizamos la minima
+                            mag[j] = min
                         
                
                 DeltaDragonFlies[i][3] = magDelta[0]
@@ -283,7 +301,7 @@ class Meta:
                 DeltaDragonFlies[i][5] = magDelta[2]
 
 
-                print("final: ", mag, orden)
+                #print("final: ", mag, orden)
                 solution = Solution(orden, mag)
 
                 modelo.aplicarTesado([solution])  #Se aplica tension en la nueva solution con vuelo de Levy
@@ -294,15 +312,22 @@ class Meta:
                     continue
                 
                 #print("newfitness: ", newFitness)
-                print("new fitness: ", newFitness, " - current fitness: ", DragonFlies[i][6], "\n")
+                #print("new fitness: ", newFitness, " - current fitness: ", DragonFlies[i][6], "\n")
    
                 if newFitness <= DragonFlies[i][6]:
-                    print("MENOR !!!")
+                    #print("MENOR !!!")
                     for j in range(3):
                         DragonFlies[i][j] = orden[j] 
                         DragonFlies[i][j + 3] = mag[j]
                     DragonFlies[i][6] = newFitness
+            
+            #print("best fitness: ", foodFitness)
 
+            '''
+            if newFitness is foodFitness:
+                countSameFitness = countSameFitness + 1
+            else countSameFitness = 0
+            '''
             #se incrementa el indice de las iteraciones
 
             '''REMUEVO Y CAMBIO ARCHIVOS CORRESPONDIENTES PARA EVITAR TIEMPOS DE CALCULOS EXPONENCIALES'''

@@ -31,8 +31,8 @@ DATOS_MH = {
 }
 
 DATOS_MH_DA = {
-    "Poblacion": 10,
-    "Iteraciones": 30
+    "Poblacion": 15,
+    "Iteraciones": 20
 }
 
 
