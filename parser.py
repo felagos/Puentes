@@ -9,14 +9,17 @@ for instancia in files:
 			fileName = path+str(i)+".txt"
 			file = open(fileName, "r")
 
-			lines = file.readlines()
-			line = lines[-1].split(",")
-			
+		if len(line) >= 15:
 			try:
 				fileNew.write(line[15]+"\n")
 			except:
 				print(line, fileName)
-
+		else:
+			line = line[11].split(":")
+			try:
+				fileNew.write(line[1]+"\n")
+			except:
+				print(line, fileName)
 			file.close()
 
 		fileNew.close()
