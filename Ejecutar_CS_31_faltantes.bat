@@ -24,26 +24,6 @@ ren %Modificado2%%Instance% %Mod%&:: Cambiamos le nombre de la instancia a "Puen
 xcopy %Instancias%%Instance2% %Original%&:: Copiamos la instancia original a la carpeta "Original"
 ren %Original%%Instance2% %Orig%&:: Cambiamos el nombre de la instancia a "PuenteOrig.sdb"
 
-Rem Ejecutamos la instancia j veces
-for %%j in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15) do (
-	Rem INSTANCIA CS
-	cd %ECS%&:: Nos Posicionamos en la ruta donde esta nuestra metaheurística
-	Python Main.py&:: Ejecutamos la Metaheurística
-	xcopy "%Ruta%%Reg2%" "%Link2%"&:: Copiamos el resultado de nuestra ejecución a nuestra carpeta de resultados
-	cd "%Link2%"&:: Nos posicionamos en la ruta donde estan nuestro resultados
-	ren "%Link2%%Reg2%" %Inta%CS%%j.txt&:: Cambiamos el nombre del resultado obtenido por [Nombre de instancia][Nombre de Metaheurística]j.txt
-	del /f /q *.*"%Link%%EBH%%Reg2%"
-	)
-
-rd /S /Q %Modificado%&::Elimino la carpeta "Modificado"
-rd /S /Q %Modificado2%&::Elimino la carpeta "Modificado2"
-rd /S /Q %Original%&::Elimino la carpeta "Original"
-mkdir %Modificado%&::Creo la carpeta "Modificado"
-mkdir %Modificado2%&::Creo la carpeta "Modificado2"
-mkdir %Original%&::Creo la carpeta "Original"
-Rem FIN DE EJECUCIÓN DE INSTANCIA ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 Rem INICIO DE EJECUCIÓN DE INSTANCIA----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 set Inta=RC-AA10&:: Nombre de la instancia a Ejecutar
 
@@ -60,7 +40,7 @@ xcopy %Instancias%%Instance2% %Original%&:: Copiamos la instancia original a la 
 ren %Original%%Instance2% %Orig%&:: Cambiamos el nombre de la instancia a "PuenteOrig.sdb"
 
 Rem Ejecutamos la instancia j veces
-for %%j in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15) do (
+for %%j in (11,12,13,14,15) do (
 	Rem INSTANCIA CS
 	cd %ECS%&:: Nos Posicionamos en la ruta donde esta nuestra metaheurística
 	Python Main.py&:: Ejecutamos la Metaheurística
