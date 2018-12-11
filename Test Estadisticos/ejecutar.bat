@@ -1,0 +1,11 @@
+mann-whit.exe AB-TCVCS.txt emptyparam.txt output_AB-TCVCS.txt > resultados_AB-TCVCS.txt
+mann-whit.exe CC-TCVCS.txt emptyparam.txt output_CC-TCVCS.txt > resultados_CC-TCVCS.txt
+mann-whit.exe CR-AA10CS.txt emptyparam.txt output_CR-AA10CS.txt > resultados_CR-AA10CS.txt
+mann-whit.exe HW-TCVCS.txt emptyparam.txt output_HW-TCVCS.txt > resultados_HW-TCVCS.txt
+mann-whit.exe PT-TCVCS.txt emptyparam.txt output_PT-TCVCS.txt > resultados_PT-TCVCS.txt
+mann-whit.exe PV-TCVCS.txt emptyparam.txt output_PV-TCVCS.txt > resultados_PV-TCVCS.txt
+mann-whit.exe RC-AA10CS.txt emptyparam.txt output_RC-AA10CS.txt > resultados_RC-AA10CS.txt
+mann-whit.exe RD-AA10CS.txt emptyparam.txt output_RD-AA10CS.txt > resultados_RD-AA10CS.txt
+mann-whit.exe TC-TCVCS.txt emptyparam.txt output_TC-TCVCS.txt > resultados_TC-TCVCS.txt
+mann-whit.exe VC-TCVCS.txt emptyparam.txt output_VC-TCVCS.txt > resultados_VC-TCVCS.txt
+mann-whit.exe WR-TCVCS.txt emptyparam.txt output_WR-TCVCS.txt > resultados_WR-TCVCS.txt
