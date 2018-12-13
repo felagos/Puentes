@@ -16,7 +16,19 @@ for instance in instances:
 
     contentCS = fileCS.read()
     contentDA = fileDA.read()
-    fullContent = contentCS + "\n" + contentDA
+
+    valuesCS = contentCS.split("\n")
+    del valuesCS[-1]
+    valuesCS.sort()
+    contentCS = "\n".join(valuesCS)  
+    
+    valuesDA = contentDA.split("\n")
+    del valuesDA[-1]
+    valuesDA.sort()
+    valuesDA = contentDA.split("\n")
+    contentDA = "\n".join(valuesDA)  
+
+    fullContent = contentCS + "\n\n" + contentDA
     fileResult.write(fullContent.rstrip())
     
     command = "mann-whit.exe " + path + " emptyparam.txt output_" + instance+".txt > resultados_" + instance + ".txt"
