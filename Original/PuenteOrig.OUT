@@ -1,0 +1,22 @@
+ SAP2000 v20.1.0 Ultimate 64-bit (Analysis Build 9626/64)                       
+ File: C:\Puentes\Original\PuenteOrig.OUT                                       
+                                                                     
+                                                                       
+
+ D I S P L A C E M E N T   D E G R E E S   O F   F R E E D O M
+
+         (A) = Active DOF, equilibrium equation
+         (-) = Restrained DOF, reaction computed
+         (+) = Constrained DOF
+         (>) = External substructure DOF
+         ( ) = Null DOF
+
+  JOINTS              UX  UY  UZ  RX  RY  RZ
+      93 TO      98    A   -   -   A   A   A
+       8 TO      16    A   A   A   A   A   A
+      18               -   -   -   -   -   -
+      20 TO      42    A   A   A   A   A   A
+      44               -   -   -   -   -   -
+      46 TO      52    A   A   A   A   A   A
+      54               -   -   -   -   -   -
+      55 TO      19    A   A   A   A   A   A

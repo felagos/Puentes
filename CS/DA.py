@@ -51,6 +51,15 @@ class Meta:
         maxTesado = max(modelo.numx)
         minTesado = modelo.tesadoMinimo
 
+        print("ub: ", ub)
+        print("lb: ", lb)
+
+        print("maxTesado: ", max(modelo.numx))
+        print("minTesado: ", modelo.tesadoMinimo)
+
+        return False
+
+
         #ub = max(modelo.numx)
         #lb = modelo.tesadoMinimo
 
