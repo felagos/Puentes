@@ -1,0 +1,2 @@
+2 better than 1 with a p-value of  3.39175839e-006
+1 better than 2 with a p-value of  0.999996608
